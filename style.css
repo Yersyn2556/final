@@ -1,8 +1,8 @@
-/* =======================
-   Homework Two: Advanced Selectors
-   ======================= */
+/* ======================
+   Final Project Styles
+   ====================== */
 
-/* 1. body */
+/* Body */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -10,83 +10,66 @@ body {
   padding: 0;
 }
 
-/* 2. header */
+/* Header */
 header {
   background-color: #f8c471;
   padding: 20px;
+  text-align: center;
 }
 
-/* 3. nav */
+/* Navigation */
 nav {
-  display: inline-block;
-  width: 80%;
+  display: flex;
+  justify-content: center;
   background-color: #5dade2;
   padding: 10px;
 }
 
-/* nav image */
-nav img {
-  width: 10%;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-/* 4. main */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #2e86c1;
+  border-radius: 5px;
+}
+
+/* Main */
 main {
-  background-color: #fdfefe;
-  font-size: 16px;
   padding: 20px;
 }
 
-/* 5. footer */
-footer {
-  background-color: #a9cce3;
-  padding: 15px;
-  text-align: center;
-}
-
-/* 6. li - закомментировано */
-/* li {
-  display: inline-block;
-  width: 100px;
-  margin-right: 10px;
-} */
-
-/* 7. h1 */
-h1 {
-  text-align: center;
-  color: darkblue;
-  font-family: Georgia, serif;
-}
-
-/* 8. p */
-p {
-  line-height: 1.5;
-}
-
-/* 9. Grid layout */
+/* Grid Gallery */
 .grid {
   display: grid;
-  grid-template-columns: 40% 40%;
-  justify-content: center;
-  align-items: start;
-  row-gap: 20px;
+  grid-template-columns: repeat(2, 45%);
+  gap: 20px;
 }
 
 .grid img {
   width: 100%;
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-/* 10. Flex layout */
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* nth-child example */
+.grid img:nth-child(2n) {
+  border-radius: 50%;
 }
 
-.flex img {
-  width: auto;
-}
-
-/* 11. Skip link style */
+/* Skip-link */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -101,4 +84,11 @@ p {
 .skip-link:focus {
   top: 0;
   left: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #a9cce3;
+  padding: 15px;
+  text-align: center;
 }
